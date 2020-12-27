@@ -17,7 +17,7 @@ public class ReverseStringWord {
     }
 
     public String reverseWords2(String a){
-        StringBuilder sb = trimSpaces(s);
+        StringBuilder sb = trimSpaces(a);
 
         // 反转字符串
         reverse(sb, 0, sb.length() - 1);

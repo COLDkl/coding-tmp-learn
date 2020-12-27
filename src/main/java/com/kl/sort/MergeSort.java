@@ -1,4 +1,6 @@
-package sort;
+package com.kl.sort;
+
+import java.util.Arrays;
 
 public class MergeSort {
 
@@ -21,7 +23,7 @@ public class MergeSort {
         int k = 0;
         // 把较小的数移动新数组中
         while (i <= mid && j <= high) {
-            if (a[i] < a[j]) {
+            if (a[i] <= a[j]) {
                 temp[k++] = a[i++];
             } else {
                 temp[k++] = a[j++];
@@ -40,5 +42,11 @@ public class MergeSort {
             a[x + low] = temp[x];
 
         }
+    }
+
+    public static void main(String[] args) {
+        int[] testarr = {1, 2, 3, 0, 6, 4, 0, 1};
+        sort(testarr, 0, testarr.length - 1);
+        System.out.println(Arrays.toString(testarr));
     }
 }
